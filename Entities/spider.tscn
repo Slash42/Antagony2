@@ -9,10 +9,10 @@ radius = 9.0
 height = 38.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgak3"]
-radius = 2.78293
-height = 10.7607
+radius = 14.2857
+height = 44.5269
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="spider" type="CharacterBody2D" groups=["spider"]]
 motion_mode = 1
 script = ExtResource("1_regqq")
 
@@ -21,19 +21,17 @@ scale = Vector2(1, 0.998112)
 script = ExtResource("2_hfn2x")
 
 [node name="SpiderHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_xapbo")
 
 [node name="SpiderSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 2)
 scale = Vector2(2, 2)
 texture = ExtResource("1_ex62d")
 
 [node name="AttackRange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
-position = Vector2(0, 1)
 rotation = 1.5708
 scale = Vector2(5.39, 5.39)
 shape = SubResource("CapsuleShape2D_dgak3")

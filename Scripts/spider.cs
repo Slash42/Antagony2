@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
-public partial class Enemy : CharacterBody2D
+public partial class spider : CharacterBody2D
 {
     Player player;
 
@@ -14,9 +14,12 @@ public partial class Enemy : CharacterBody2D
     float attack_speed;
     float time_until_attack;
     bool within_attack_range = false;
+   
+    
+    Random random = new Random();
 
     public override void _Ready() {
-        player = (Player)GetTree().Root.GetNode("MainGame").GetNode("Player");
+        player = (Player)GetTree().Root.GetNode("Main Game").GetNode("Player");
         Debug.Print(player.Name);
         attack_speed = 1 / aps;
         time_until_attack = attack_speed;
@@ -31,13 +34,21 @@ public partial class Enemy : CharacterBody2D
         }
     }
     public override void _PhysicsProcess(double delta) {
-        if (player != null) {
-            LookAt(player.GlobalPosition);
+        if (player != null && within_attack_range) {           
             Vector2 direction = (player.GlobalPosition - GlobalPosition).Normalized();
             Velocity = direction * speed;
+        } else if (player != null) {
+            if (time_until_attack <= 0) {
+            int x = random.Next(-200, 201);
+            int y = random.Next(-200, 201);
+            Velocity = new Vector2(x,y);
+            time_until_attack = attack_speed;
+            } else {
+            time_until_attack -= (float)delta;
+            }            
         } else {
             Velocity = Vector2.Zero;
-        }
+        } 
         MoveAndSlide();
     }
 

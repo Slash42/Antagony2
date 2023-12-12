@@ -36,5 +36,5 @@ position = Vector2(74, -2.00027)
 scale = Vector2(10.0663, 10.0433)
 script = ExtResource("3_v4vtu")
 acid_scene = ExtResource("4_vcuq7")
-acid_speed = 500.0
-acid_damage = 10.0
+acid_speed = 400.0
+acid_damage = 20.0
