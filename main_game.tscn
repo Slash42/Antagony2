@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0x5slri61ru0"]
 
 [ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/player.tscn" id="1_c6fms"]
-[ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/enemy.tscn" id="2_4x55t"]
-[ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Szene/Hintergrund.tscn" id="3_on8ry"]
+[ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/spider.tscn" id="2_t0yqr"]
+[ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Szene/Hintergrund.tscn" id="3_dc278"]
 
 [node name="Main Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_c6fms")]
 position = Vector2(933, 509)
 
-[node name="Enemy" parent="." instance=ExtResource("2_4x55t")]
-position = Vector2(625, 516)
+[node name="Spider" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(667, 497)
+scale = Vector2(1.01902, 1.00559)
 
-[node name="Hintergrund" parent="." instance=ExtResource("3_on8ry")]
+[node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
 z_index = -1
-position = Vector2(-2, -5)
+position = Vector2(1, 0)
