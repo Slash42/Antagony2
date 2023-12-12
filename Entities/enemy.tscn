@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bl7dkjcbes7j"]
 
 [ext_resource type="Texture2D" uid="uid://cs12kpv21al30" path="res://Sprites/Spider v1.png" id="1_ex62d"]
-[ext_resource type="Script" path="res://Scripts/Enemy.cs" id="1_regqq"]
+[ext_resource type="Script" path="res://Scripts/spider.cs" id="1_regqq"]
 [ext_resource type="Script" path="res://Scripts/Health.cs" id="2_hfn2x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xapbo"]
