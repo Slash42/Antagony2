@@ -5,7 +5,7 @@ public partial class AntAcidShooter : Node2D
 {
     [Export] PackedScene acid_scene;
     [Export] float acid_speed = 600f;
-    [Export] float bps = 2f;
+    [Export] float bps = 1.5f;
     [Export] float acid_damage = 30f;
 
     float fire_rate;

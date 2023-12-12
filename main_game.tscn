@@ -12,6 +12,12 @@ position = Vector2(391, 187)
 [node name="spider" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(323, 736)
 
+[node name="spider2" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1145, 255)
+
 [node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
 z_index = -1
 position = Vector2(1, 0)
+
+[node name="spider3" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1537, 451)

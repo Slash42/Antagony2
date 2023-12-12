@@ -11,7 +11,7 @@ public partial class Health : Node2D
     }
 
     public void Dmg(float dmg) {
-        health -= max_health;
+        health -= dmg;
 
         if (health <= 0) {
            GetParent().QueueFree(); 

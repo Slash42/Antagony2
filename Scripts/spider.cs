@@ -6,14 +6,16 @@ using System.Security.Cryptography.X509Certificates;
 public partial class spider : CharacterBody2D
 {
     Player player;
+    private AnimatedSprite2D _animatedSprite;
 
     [Export] float speed = 250f;
-    [Export] float dmg = 10f;
+    [Export] float dmg = 40f;
     [Export] float aps = 2f;
 
     float attack_speed;
     float time_until_attack;
     bool within_attack_range = false;
+    bool within_vis_range = false;
    
     
     Random random = new Random();
@@ -21,6 +23,7 @@ public partial class spider : CharacterBody2D
     public override void _Ready() {
         player = (Player)GetTree().Root.GetNode("Main Game").GetNode("Player");
         Debug.Print(player.Name);
+        _animatedSprite = GetNode<AnimatedSprite2D>("SpiderWalk");
         attack_speed = 1 / aps;
         time_until_attack = attack_speed;
     }
@@ -32,9 +35,10 @@ public partial class spider : CharacterBody2D
         } else {
             time_until_attack -= (float)delta;
         }
+        _animatedSprite.Play("SpiderWalk");
     }
     public override void _PhysicsProcess(double delta) {
-        if (player != null && within_attack_range) {           
+        if (player != null && within_vis_range) {           
             Vector2 direction = (player.GlobalPosition - GlobalPosition).Normalized();
             Velocity = direction * speed;
         } else if (player != null) {
@@ -53,12 +57,26 @@ public partial class spider : CharacterBody2D
     }
 
     public void Attack() {
+        player.GetNode<Health>("Health").Dmg(dmg);
         Debug.Print("Attack player");
+    }
+
+    public void OnVisRangeBodyEnter(Node2D body) {
+        if (body.IsInGroup("player")) {
+            Debug.Print("Player in range");
+            within_vis_range = true;
+        } 
+    }
+    public void OnVisRangeBodyExit(Node2D body) {
+        if (body.IsInGroup("player")) {
+            within_vis_range = false;
+            time_until_attack = attack_speed;
+        } 
     }
 
     public void OnAttackRangeBodyEnter(Node2D body) {
         if (body.IsInGroup("player")) {
-            Debug.Print("Player in range");
+            Debug.Print("Player in attack range");
             within_attack_range = true;
         } 
     }
