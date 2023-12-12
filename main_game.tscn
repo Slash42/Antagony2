@@ -10,7 +10,7 @@
 position = Vector2(451, 395)
 
 [node name="Spider" parent="." instance=ExtResource("2_t0yqr")]
-position = Vector2(555, 474)
+position = Vector2(279, 288)
 scale = Vector2(1.01902, 1.00559)
 
 [node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
