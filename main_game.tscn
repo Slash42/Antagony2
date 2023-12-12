@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0x5slri61ru0"]
+
+[ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/player.tscn" id="1_c6fms"]
+[ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/spider.tscn" id="2_t0yqr"]
+
+[node name="Main Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_c6fms")]
+position = Vector2(933, 509)
+
+[node name="Spider" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(667, 497)
+scale = Vector2(1.01902, 1.00559)

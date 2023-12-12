@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://gwyygu4qwi5"]
+
+[ext_resource type="Script" path="res://Scripts/player.cs" id="1_iahc7"]
+[ext_resource type="Script" path="res://Scripts/Health.cs" id="2_42fjf"]
+[ext_resource type="Texture2D" uid="uid://bxqit84y7epqc" path="res://Sprites/Ant v1.png" id="2_lyi0l"]
+[ext_resource type="Script" path="res://Scripts/AntAcidShooter.cs" id="3_v4vtu"]
+[ext_resource type="PackedScene" uid="uid://c0it6s4yv248q" path="res://Entities/ant_acid.tscn" id="4_vcuq7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjecl"]
+radius = 14.0
+height = 72.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+rotation = 1.5708
+motion_mode = 1
+script = ExtResource("1_iahc7")
+
+[node name="Health" type="Node2D" parent="."]
+script = ExtResource("2_42fjf")
+max_health = 200.0
+
+[node name="AntSprite" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(4, 4.311)
+texture = ExtResource("2_lyi0l")
+
+[node name="AntHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-3.00001, -1.99999)
+rotation = 1.5708
+scale = Vector2(1.25, 1.25)
+shape = SubResource("CapsuleShape2D_bjecl")
+
+[node name="AntAcidShooter" type="Node2D" parent="."]
+position = Vector2(65, -2.00024)
+scale = Vector2(10.0663, 10.0433)
+script = ExtResource("3_v4vtu")
+acid_scene = ExtResource("4_vcuq7")
+acid_speed = 400.0
+acid_damage = 10.0

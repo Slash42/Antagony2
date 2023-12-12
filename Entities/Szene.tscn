@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cepot67v18bqo"]
+
+[node name="Szene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+rendering_quadrant_size = 32
+format = 2

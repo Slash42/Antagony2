@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl7dkjcbes7j"]
+
+[ext_resource type="Script" path="res://Scripts/Spider.cs" id="1_7e7nx"]
+[ext_resource type="Texture2D" uid="uid://cs12kpv21al30" path="res://Sprites/Spider v1.png" id="1_ex62d"]
+[ext_resource type="Script" path="res://Scripts/Health.cs" id="2_hfn2x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xapbo"]
+radius = 9.0
+height = 38.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgak3"]
+radius = 2.78293
+height = 10.7607
+
+[node name="Spider" type="CharacterBody2D" groups=["enemy"]]
+motion_mode = 1
+script = ExtResource("1_7e7nx")
+aps = 2.0
+
+[node name="Health" type="Node2D" parent="."]
+scale = Vector2(1, 0.998112)
+script = ExtResource("2_hfn2x")
+max_health = 200.0
+
+[node name="SpiderHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xapbo")
+
+[node name="SpiderSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ex62d")
+
+[node name="AttackRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+position = Vector2(0, 1)
+rotation = 1.5708
+scale = Vector2(5.39, 5.39)
+shape = SubResource("CapsuleShape2D_dgak3")
+
+[connection signal="body_entered" from="AttackRange" to="." method="OnAttackRangeBodyEnter"]
+[connection signal="body_exited" from="AttackRange" to="." method="OnAttackRangeBodyExit"]
