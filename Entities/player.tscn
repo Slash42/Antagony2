@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://gwyygu4qwi5"]
 
-[ext_resource type="Script" path="res://Scripts/player.cs" id="1_iahc7"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_llvsy"]
 [ext_resource type="Script" path="res://Scripts/Health.cs" id="2_42fjf"]
 [ext_resource type="Texture2D" uid="uid://bxqit84y7epqc" path="res://Sprites/Ant v1.png" id="2_lyi0l"]
 [ext_resource type="Script" path="res://Scripts/AntAcidShooter.cs" id="3_v4vtu"]
@@ -13,7 +13,7 @@ height = 72.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 rotation = 1.5708
 motion_mode = 1
-script = ExtResource("1_iahc7")
+script = ExtResource("1_llvsy")
 
 [node name="Health" type="Node2D" parent="."]
 script = ExtResource("2_42fjf")

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class ant_acid : RigidBody2D
+public partial class Ant_acid : RigidBody2D
 {
     [Export] public float dmg = 10;
     public override void _Ready() {

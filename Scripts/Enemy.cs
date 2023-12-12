@@ -3,20 +3,20 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
-public partial class Spider : CharacterBody2D
+public partial class Enemy : CharacterBody2D
 {
-    player player;
+    Player player;
 
     [Export] float speed = 250f;
     [Export] float dmg = 10f;
-    [Export] float aps = 10f;
+    [Export] float aps = 2f;
 
     float attack_speed;
     float time_until_attack;
     bool within_attack_range = false;
 
     public override void _Ready() {
-        player = (player)GetTree().Root.GetNode("MainGame").GetNode("Player");
+        player = (Player)GetTree().Root.GetNode("MainGame").GetNode("Player");
         Debug.Print(player.Name);
         attack_speed = 1 / aps;
         time_until_attack = attack_speed;

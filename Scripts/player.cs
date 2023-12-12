@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class player : CharacterBody2D
+public partial class Player : CharacterBody2D
 {
     [Export] public float speed = 300f;
 
@@ -12,7 +12,7 @@ public partial class player : CharacterBody2D
 
         Velocity = move_input * speed;
 
-        global::System.Object value = MoveAndSlide();
+        MoveAndSlide();
 
     }
 }
