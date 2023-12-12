@@ -3,7 +3,7 @@ using System;
 
 public partial class ant_acid : RigidBody2D
 {
-    [Export] public float dmg = 10;
+    [Export] public float dmg = 20;
     public override void _Ready() {
         Timer timer = GetNode<Timer>("Timer");
         timer.Timeout += () => QueueFree();
