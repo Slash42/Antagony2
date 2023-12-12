@@ -13,7 +13,7 @@ lock_rotation = true
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_vkeb3")
-dmg = 5.0
+dmg = 50.0
 
 [node name="AntAcidHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
