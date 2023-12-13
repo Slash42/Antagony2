@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0x5slri61ru0"]
+
+[ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/player.tscn" id="1_c6fms"]
+[ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/spider.tscn" id="2_t0yqr"]
+[ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Szene/Hintergrund.tscn" id="3_dc278"]
+
+[node name="Main Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_c6fms")]
+position = Vector2(399, 752)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.5, 2.5)
+
+[node name="spider" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(403, 217)
+
+[node name="spider2" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(946, 209)
+
+[node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
+z_index = -1
+position = Vector2(1, 0)
+
+[node name="spider3" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1616, 246)
