@@ -1,8 +1,9 @@
 using Godot;
 using System;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
-public partial class Spider : CharacterBody2D
+public partial class spider : CharacterBody2D
 {
 	Player player;
 	AnimatedSprite2D _animatedSprite;
@@ -61,26 +62,26 @@ public partial class Spider : CharacterBody2D
 	}
 
 	public void OnVisRangeBodyEnter(Node2D body) {
-		if (body.IsInGroup("Player")) {
+		if (body.IsInGroup("player")) {
 			Debug.Print("Player in range");
 			within_vis_range = true;
 		} 
 	}
 	public void OnVisRangeBodyExit(Node2D body) {
-		if (body.IsInGroup("Player")) {
+		if (body.IsInGroup("player")) {
 			within_vis_range = false;
 			time_until_attack = attack_speed;
 		} 
 	}
 
 	public void OnAttackRangeBodyEnter(Node2D body) {
-		if (body.IsInGroup("Player")) {
+		if (body.IsInGroup("player")) {
 			Debug.Print("Player in attack range");
 			within_attack_range = true;
 		} 
 	}
 	public void OnAttackRangeBodyExit(Node2D body) {
-		if (body.IsInGroup("Player")) {
+		if (body.IsInGroup("player")) {
 			within_attack_range = false;
 			time_until_attack = attack_speed;
 		} 

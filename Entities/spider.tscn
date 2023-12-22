@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bl7dkjcbes7j"]
 
-[ext_resource type="Script" path="res://Scripts/spider.cs" id="1_regqq"]
+[ext_resource type="Script" path="res://Scripts/Spider.cs" id="1_regqq"]
 [ext_resource type="Script" path="res://Scripts/Health.cs" id="2_hfn2x"]
 [ext_resource type="Texture2D" uid="uid://bubqqadn5kxtq" path="res://Sprites/SpiderAnimated.png" id="2_xa552"]
 
@@ -48,7 +48,7 @@ height = 38.0
 radius = 12.2449
 height = 44.5269
 
-[node name="spider" type="CharacterBody2D" groups=["enemy"]]
+[node name="Spider" type="CharacterBody2D" groups=["Enemy"]]
 scale = Vector2(0.6, 0.6)
 motion_mode = 1
 script = ExtResource("1_regqq")
