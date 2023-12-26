@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
-public partial class spider : CharacterBody2D
+public partial class Spider : CharacterBody2D
 {
 	Player player;
 	AnimatedSprite2D _animatedSprite;
@@ -43,8 +43,8 @@ public partial class spider : CharacterBody2D
 			Velocity = direction * speed;
 		} else if (player != null) {
 			if (time_until_attack <= 0) {
-			int x = random.Next(-200, 201);
-			int y = random.Next(-200, 201);
+			int x = random.Next(-100, 101);
+			int y = random.Next(-100, 101);
 			Velocity = new Vector2(x,y);
 			time_until_attack = attack_speed;
 			} else {
@@ -62,26 +62,26 @@ public partial class spider : CharacterBody2D
 	}
 
 	public void OnVisRangeBodyEnter(Node2D body) {
-		if (body.IsInGroup("player")) {
+		if (body.IsInGroup("Player")) {
 			Debug.Print("Player in range");
 			within_vis_range = true;
 		} 
 	}
 	public void OnVisRangeBodyExit(Node2D body) {
-		if (body.IsInGroup("player")) {
+		if (body.IsInGroup("Player")) {
 			within_vis_range = false;
 			time_until_attack = attack_speed;
 		} 
 	}
 
 	public void OnAttackRangeBodyEnter(Node2D body) {
-		if (body.IsInGroup("player")) {
+		if (body.IsInGroup("Player")) {
 			Debug.Print("Player in attack range");
 			within_attack_range = true;
 		} 
 	}
 	public void OnAttackRangeBodyExit(Node2D body) {
-		if (body.IsInGroup("player")) {
+		if (body.IsInGroup("Player")) {
 			within_attack_range = false;
 			time_until_attack = attack_speed;
 		} 

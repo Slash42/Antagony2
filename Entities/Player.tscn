@@ -15,9 +15,6 @@ rotation = 1.5708
 scale = Vector2(0.4, 0.4)
 motion_mode = 1
 script = ExtResource("1_llvsy")
-maxSpeed = 200.0
-acceleration = 200.0
-deceleration = 500.0
 
 [node name="Health" type="Node2D" parent="."]
 script = ExtResource("2_42fjf")

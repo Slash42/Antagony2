@@ -10,7 +10,7 @@ public partial class Ant_acid : RigidBody2D
 	}
 
 	public void OnBodyEntered(Node2D body) {
-		if (body.IsInGroup("enemy")) {
+		if (body.IsInGroup("Enemy")) {
 			body.GetNode<Health>("Health").Dmg(dmg);
 		}
 		QueueFree();
