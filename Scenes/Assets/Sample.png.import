@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cii2ox56lghh5"
-path="res://.godot/imported/Forest Tilesett.png-441704927d0ccce3ffc2f308e3770712.ctex"
+uid="uid://luyi6hf3h13b"
+path="res://.godot/imported/Sample.png-743d33dfc234d26933f80bb9f149d973.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Szene/Assets/Forest Tilesett.png"
-dest_files=["res://.godot/imported/Forest Tilesett.png-441704927d0ccce3ffc2f308e3770712.ctex"]
+source_file="res://Scenes/Assets/Sample.png"
+dest_files=["res://.godot/imported/Sample.png-743d33dfc234d26933f80bb9f149d973.ctex"]
 
 [params]
 

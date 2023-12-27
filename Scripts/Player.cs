@@ -3,6 +3,7 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	[Export] public float speed = 300f;
+	public float maxHealth = 100;
 
 	public override void _PhysicsProcess(double delta) {
 

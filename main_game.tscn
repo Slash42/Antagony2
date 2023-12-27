@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0x5slri61ru0"]
+[gd_scene load_steps=5 format=3 uid="uid://b0x5slri61ru0"]
 
 [ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/Player.tscn" id="1_c6fms"]
 [ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/Spider.tscn" id="2_t0yqr"]
-[ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Szene/Hintergrund.tscn" id="3_dc278"]
+[ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Scenes/Hintergrund.tscn" id="3_dc278"]
+[ext_resource type="Script" path="res://Scripts/HealthBar.cs" id="4_uncp5"]
 
 [node name="Main Game" type="Node2D"]
+
+[node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
+z_index = -1
+position = Vector2(1, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_c6fms")]
 position = Vector2(399, 752)
@@ -18,9 +23,22 @@ position = Vector2(403, 217)
 [node name="Spider2" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(946, 209)
 
-[node name="Hintergrund" parent="." instance=ExtResource("3_dc278")]
-z_index = -1
-position = Vector2(1, 0)
-
 [node name="Spider3" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(1616, 246)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+visibility_layer = 2
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.013
+anchor_right = 0.07
+anchor_bottom = 0.038
+offset_left = 0.639999
+offset_top = -0.04
+offset_right = -0.399994
+offset_bottom = -0.0400009
+size_flags_horizontal = 0
+script = ExtResource("4_uncp5")

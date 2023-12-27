@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6rxscymplj2v"
-path="res://.godot/imported/Forest Structures.png-10a2dc44c14a66ea5eafc0dd5f9a1b31.ctex"
+uid="uid://b4xtju8mx5ixq"
+path="res://.godot/imported/Settlement.png-df032507797b894e197511b5762b1bcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Szene/Assets/Forest Structures.png"
-dest_files=["res://.godot/imported/Forest Structures.png-10a2dc44c14a66ea5eafc0dd5f9a1b31.ctex"]
+source_file="res://Scenes/Assets/Settlement.png"
+dest_files=["res://.godot/imported/Settlement.png-df032507797b894e197511b5762b1bcf.ctex"]
 
 [params]
 

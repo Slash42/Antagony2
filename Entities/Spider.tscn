@@ -45,13 +45,15 @@ radius = 9.0
 height = 38.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgak3"]
-radius = 12.2449
-height = 44.5269
+radius = 12.8889
+height = 31.8518
 
 [node name="Spider" type="CharacterBody2D" groups=["Enemy"]]
 scale = Vector2(0.6, 0.6)
 motion_mode = 1
 script = ExtResource("1_regqq")
+speed = 120.0
+dmg = 20.0
 
 [node name="Health" type="Node2D" parent="."]
 scale = Vector2(1, 0.998112)

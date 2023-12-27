@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqwammulw4aef"
-path="res://.godot/imported/Forest Cliff.png-b672e7ad24b3cfb11955674f5e283254.ctex"
+path="res://.godot/imported/Forest Cliff.png-b8c4ad981b7bd009ad62524059b7e659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Szene/Assets/Forest Cliff.png"
-dest_files=["res://.godot/imported/Forest Cliff.png-b672e7ad24b3cfb11955674f5e283254.ctex"]
+source_file="res://Scenes/Assets/Forest Cliff.png"
+dest_files=["res://.godot/imported/Forest Cliff.png-b8c4ad981b7bd009ad62524059b7e659.ctex"]
 
 [params]
 

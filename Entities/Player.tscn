@@ -15,10 +15,11 @@ rotation = 1.5708
 scale = Vector2(0.4, 0.4)
 motion_mode = 1
 script = ExtResource("1_llvsy")
+speed = 200.0
 
 [node name="Health" type="Node2D" parent="."]
 script = ExtResource("2_42fjf")
-max_health = 200.0
+maxHealth = 200.0
 
 [node name="AntSprite" type="Sprite2D" parent="."]
 rotation = 1.5708
@@ -32,7 +33,7 @@ scale = Vector2(1.25, 1.25)
 shape = SubResource("CapsuleShape2D_bjecl")
 
 [node name="AntAcidShooter" type="Node2D" parent="."]
-position = Vector2(80, -5.00029)
+position = Vector2(77.5, -7.50028)
 scale = Vector2(10.0663, 10.0433)
 script = ExtResource("3_v4vtu")
 acid_scene = ExtResource("4_vcuq7")
