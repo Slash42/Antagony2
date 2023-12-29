@@ -12,7 +12,7 @@ height = 72.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 rotation = 1.5708
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.36, 0.36)
 motion_mode = 1
 script = ExtResource("1_llvsy")
 speed = 200.0
@@ -37,6 +37,6 @@ position = Vector2(77.5, -7.50028)
 scale = Vector2(10.0663, 10.0433)
 script = ExtResource("3_v4vtu")
 acid_scene = ExtResource("4_vcuq7")
-acid_speed = 400.0
+acid_speed = 250.0
 bps = 2.0
 acid_damage = 10.0

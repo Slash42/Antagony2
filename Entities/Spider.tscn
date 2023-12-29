@@ -42,14 +42,14 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xapbo"]
 radius = 9.0
-height = 38.0
+height = 30.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgak3"]
 radius = 12.8889
-height = 31.8518
+height = 38.8889
 
 [node name="Spider" type="CharacterBody2D" groups=["Enemy"]]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.5, 0.5)
 motion_mode = 1
 script = ExtResource("1_regqq")
 speed = 120.0

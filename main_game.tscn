@@ -11,11 +11,22 @@
 z_index = -1
 position = Vector2(1, 0)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Hintergrund"]
+layer = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Hintergrund/CanvasLayer"]
+visibility_layer = 2
+clip_contents = true
+offset_right = 176.0
+offset_bottom = 27.0
+size_flags_horizontal = 0
+script = ExtResource("4_uncp5")
+
 [node name="Player" parent="." instance=ExtResource("1_c6fms")]
 position = Vector2(399, 752)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 
 [node name="Spider" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(403, 217)
@@ -25,20 +36,3 @@ position = Vector2(946, 209)
 
 [node name="Spider3" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(1616, 246)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 2
-
-[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
-visibility_layer = 2
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.013
-anchor_right = 0.07
-anchor_bottom = 0.038
-offset_left = 0.639999
-offset_top = -0.04
-offset_right = -0.399994
-offset_bottom = -0.0400009
-size_flags_horizontal = 0
-script = ExtResource("4_uncp5")

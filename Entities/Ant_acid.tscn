@@ -16,11 +16,13 @@ script = ExtResource("1_lblh1")
 
 [node name="AntAcidHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2)
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_yvo8m")
 
 [node name="AntAcidSprite" type="Sprite2D" parent="."]
-position = Vector2(-4, 2)
+position = Vector2(-3, 2)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_py0nk")
 
 [node name="Timer" type="Timer" parent="."]
