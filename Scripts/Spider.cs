@@ -45,7 +45,7 @@ public partial class Spider : CharacterBody2D
 			if (time_until_attack <= 0) {
 			int x = random.Next(-100, 101);
 			int y = random.Next(-100, 101);
-			Velocity = new Vector2(x,y);
+			Velocity = new Vector2(x, y);
 			time_until_attack = attack_speed;
 			} else {
 			time_until_attack -= (float)delta;

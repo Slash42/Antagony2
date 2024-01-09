@@ -20,7 +20,7 @@ public partial class AntAcidShooter : Node2D
 		if ((Input.IsActionPressed("space") || Input.IsActionPressed("click")) && time_until_fire > fire_rate) {
 			RigidBody2D acid = acid_scene.Instantiate<RigidBody2D>();
 
-			acid.Rotation = GlobalRotation;
+			acid.RotationDegrees = GlobalRotationDegrees;
 			acid.GlobalPosition = GlobalPosition;
 			acid.LinearVelocity = acid.Transform.X * acid_speed;
 
