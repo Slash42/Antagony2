@@ -17,7 +17,7 @@ public partial class AntAcidShooter : Node2D
 	}
 
 	public override void _Process(double delta) {
-		if ((Input.IsActionPressed("space") || Input.IsActionPressed("click")) && time_until_fire > fire_rate) {
+		if (Input.IsActionPressed("click") && time_until_fire > fire_rate) {
 			RigidBody2D acid = acid_scene.Instantiate<RigidBody2D>();
 
 			acid.RotationDegrees = GlobalRotationDegrees;
