@@ -27,7 +27,7 @@ public partial class Player : CharacterBody2D
 		Vector2 mousePos = GetGlobalMousePosition();
 		Vector2 wayToLook = (mousePos - GlobalPosition).Normalized();		
 
-		if (Velocity == Vector2.Zero) {
+		if ((Math.Abs(Velocity.X) < 2) && (Math.Abs(Velocity.Y) < 2)) {
 			AnimationNodeStateMachinePlayback stateMachine = (AnimationNodeStateMachinePlayback)animationTree.Get("parameters/playback");
 			stateMachine.Travel("Idle");
 			animationTree.Set("parameters/Idle/blend_position", wayToLook);

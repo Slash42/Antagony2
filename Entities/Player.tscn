@@ -234,7 +234,7 @@ scale = Vector2(0.36, 0.36)
 motion_mode = 1
 script = ExtResource("1_llvsy")
 speed = 220.0
-accel = 10.0
+accel = 8.0
 
 [node name="AntSprite" type="Sprite2D" parent="."]
 position = Vector2(-30.5556, 11.1111)
