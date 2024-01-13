@@ -57,6 +57,7 @@ dmg = 20.0
 [node name="Health" type="Node2D" parent="."]
 scale = Vector2(1, 0.998112)
 script = ExtResource("2_hfn2x")
+maxHealth = 50.0
 
 [node name="SpiderWalk" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -70,11 +71,11 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_xapbo")
 
 [node name="AttackRange" type="Area2D" parent="."]
+scale = Vector2(1.28, 1.28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 position = Vector2(0, -1)
 rotation = 1.5708
-scale = Vector2(0.9, 0.9)
 shape = SubResource("CapsuleShape2D_dgak3")
 
 [node name="VisRange" type="Area2D" parent="."]
