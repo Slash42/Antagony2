@@ -21,7 +21,7 @@ public partial class Player : CharacterBody2D
 
     public override void _Ready()
     {
-		dash = GetNode<Dash>("Dash");
+		dash = (Dash)GetTree().Root.GetNode("Main Game").GetNode("Player").GetNode("Dash");
         animationTree = GetNode<AnimationTree>("AnimationTree");
 		acidShooter = GetNode<Node2D>("AntAcidShooter");
 		hitbox = GetNode<CollisionShape2D>("AntHitbox");
