@@ -4,11 +4,9 @@ using System;
 public partial class Textbox : CanvasLayer
 {
     MarginContainer textbox_container;
-    Label label;
 
     public override void _Ready() {
         textbox_container = GetNode<MarginContainer>("TextboxContainer");
-        label = GetNode<Label>("Label");
         ShowTextbox();
     }
 
