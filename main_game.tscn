@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0x5slri61ru0"]
+[gd_scene load_steps=10 format=3 uid="uid://b0x5slri61ru0"]
 
 [ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/Player.tscn" id="1_c6fms"]
 [ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/Spider.tscn" id="2_t0yqr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Scenes/Hintergrund.tscn" id="3_dc278"]
 [ext_resource type="Texture2D" uid="uid://ds5pl7cuma6n3" path="res://Sprites/healthbarProgress.png" id="4_8fukq"]
 [ext_resource type="Script" path="res://Scripts/HealthBar.cs" id="4_uncp5"]
+[ext_resource type="Script" path="res://Scripts/Label.cs" id="5_mw25a"]
 [ext_resource type="Script" path="res://Scripts/Textbox.cs" id="7_44m86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7yi3"]
@@ -40,8 +41,16 @@ texture_under = ExtResource("3_3ylpt")
 texture_progress = ExtResource("4_8fukq")
 script = ExtResource("4_uncp5")
 
+[node name="Label" type="Label" parent="Hintergrund/CanvasLayer"]
+offset_left = 45.0
+offset_top = 65.0
+offset_right = 191.0
+offset_bottom = 88.0
+text = "Spiders killed: 0/100"
+script = ExtResource("5_mw25a")
+
 [node name="Player" parent="." instance=ExtResource("1_c6fms")]
-position = Vector2(-25, 578)
+position = Vector2(-43, -560)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -49,13 +58,304 @@ position_smoothing_enabled = true
 position_smoothing_speed = 16.0
 
 [node name="Spider" parent="." instance=ExtResource("2_t0yqr")]
-position = Vector2(403, 217)
+position = Vector2(413, -1019)
 
 [node name="Spider2" parent="." instance=ExtResource("2_t0yqr")]
-position = Vector2(946, 209)
+position = Vector2(5100, 118)
 
 [node name="Spider3" parent="." instance=ExtResource("2_t0yqr")]
-position = Vector2(1616, 246)
+position = Vector2(522, -2329)
+
+[node name="Spider4" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2067, -1874)
+
+[node name="Spider5" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2855, -905)
+
+[node name="Spider6" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1084, 722)
+
+[node name="Spider7" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2440, 126)
+
+[node name="Spider8" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2073, -753)
+
+[node name="Spider9" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(666, 713)
+
+[node name="Spider10" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5288, -500)
+
+[node name="Spider11" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1200, -1705)
+
+[node name="Spider12" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4312, 906)
+
+[node name="Spider13" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3664, 14)
+
+[node name="Spider14" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3552, 889)
+
+[node name="Spider15" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2040, 773)
+
+[node name="Spider16" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3510, -1383)
+
+[node name="Spider17" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3597, -445)
+
+[node name="Spider18" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3292, -38)
+
+[node name="Spider19" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4349, -1691)
+
+[node name="Spider20" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2939, -1662)
+
+[node name="Spider21" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3713, -2244)
+
+[node name="Spider22" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2479, -2045)
+
+[node name="Spider23" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2894, -2267)
+
+[node name="Spider24" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4341, 261)
+
+[node name="Spider25" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1460, -1990)
+
+[node name="Spider26" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4686, -536)
+
+[node name="Spider27" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4104, -1110)
+
+[node name="Spider28" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4980, -1629)
+
+[node name="Spider29" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4439, -2469)
+
+[node name="Spider30" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4684, -235)
+
+[node name="Spider31" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4678, 105)
+
+[node name="Spider32" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4469, 753)
+
+[node name="Spider33" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2484, -878)
+
+[node name="Spider34" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4936, 612)
+
+[node name="Spider35" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4621, -1545)
+
+[node name="Spider36" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5222, -2281)
+
+[node name="Spider37" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4707, -1858)
+
+[node name="Spider38" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4908, -641)
+
+[node name="Spider39" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4130, -399)
+
+[node name="Spider40" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5237, -1901)
+
+[node name="Spider41" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3915, -1975)
+
+[node name="Spider42" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1909, -1233)
+
+[node name="Spider43" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(542, -1599)
+
+[node name="Spider44" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1529, -97)
+
+[node name="Spider45" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3058, 753)
+
+[node name="Spider46" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3713, 669)
+
+[node name="Spider47" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3952, 820)
+
+[node name="Spider48" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(864, -134)
+
+[node name="Spider49" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1542, -2348)
+
+[node name="Spider50" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2106, -87)
+
+[node name="Spider51" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2711, 507)
+
+[node name="Spider52" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2842, -296)
+
+[node name="Spider53" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2476, -1576)
+
+[node name="Spider54" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2335, -2369)
+
+[node name="Spider55" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3749, -813)
+
+[node name="Spider56" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4882, -2073)
+
+[node name="Spider57" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4122, -1590)
+
+[node name="Spider58" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3917, -1761)
+
+[node name="Spider59" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3471, -1694)
+
+[node name="Spider60" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2815, -1939)
+
+[node name="Spider61" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3397, -2258)
+
+[node name="Spider62" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1274, -988)
+
+[node name="Spider63" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3300, -790)
+
+[node name="Spider64" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3064, -1237)
+
+[node name="Spider65" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2893, 167)
+
+[node name="Spider66" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4274, -2258)
+
+[node name="Spider67" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2483, -269)
+
+[node name="Spider68" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4465, -1213)
+
+[node name="Spider69" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4391, -693)
+
+[node name="Spider70" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1972, 278)
+
+[node name="Spider71" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(833, -1301)
+
+[node name="Spider72" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1405, 352)
+
+[node name="Spider73" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1459, -552)
+
+[node name="Spider74" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1067, -2106)
+
+[node name="Spider75" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(1813, -1613)
+
+[node name="Spider76" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3821, -1290)
+
+[node name="Spider77" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4049, -685)
+
+[node name="Spider78" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4711, 376)
+
+[node name="Spider79" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5118, 934)
+
+[node name="Spider80" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3841, 407)
+
+[node name="Spider81" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4840, -1324)
+
+[node name="Spider82" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5287, -1045)
+
+[node name="Spider83" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2925, -617)
+
+[node name="Spider84" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4450, -379)
+
+[node name="Spider85" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3816, 984)
+
+[node name="Spider86" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4716, 711)
+
+[node name="Spider87" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5281, 604)
+
+[node name="Spider88" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3994, 166)
+
+[node name="Spider89" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4152, 556)
+
+[node name="Spider90" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4856, -2361)
+
+[node name="Spider91" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3400, 458)
+
+[node name="Spider92" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5024, -459)
+
+[node name="Spider93" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5198, -81)
+
+[node name="Spider94" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5097, -884)
+
+[node name="Spider95" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5255, -1328)
+
+[node name="Spider96" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(2361, -1184)
+
+[node name="Spider97" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(4694, -938)
+
+[node name="Spider98" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3984, -145)
+
+[node name="Spider99" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(5259, 337)
+
+[node name="Spider100" parent="." instance=ExtResource("2_t0yqr")]
+position = Vector2(3251, -319)
 
 [node name="Textbox" type="CanvasLayer" parent="."]
 script = ExtResource("7_44m86")
