@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://gwyygu4qwi5"]
+[gd_scene load_steps=29 format=3 uid="uid://gwyygu4qwi5"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_llvsy"]
 [ext_resource type="Script" path="res://Scripts/Health.cs" id="2_42fjf"]
 [ext_resource type="Texture2D" uid="uid://du3ydr7guk1ug" path="res://Sprites/Antony Kopie.png" id="2_yip3d"]
 [ext_resource type="Script" path="res://Scripts/AntAcidShooter.cs" id="3_v4vtu"]
 [ext_resource type="PackedScene" uid="uid://c0it6s4yv248q" path="res://Entities/Ant_acid.tscn" id="4_vcuq7"]
+[ext_resource type="PackedScene" uid="uid://divns7ryeffxs" path="res://Entities/Dash.tscn" id="6_b735i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjecl"]
 radius = 15.5555
@@ -233,7 +234,7 @@ position = Vector2(11, -4)
 scale = Vector2(0.36, 0.36)
 motion_mode = 1
 script = ExtResource("1_llvsy")
-speed = 220.0
+base_speed = 220.0
 accel = 8.0
 
 [node name="AntSprite" type="Sprite2D" parent="."]
@@ -279,3 +280,5 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(1, -1)
 parameters/Walk/blend_position = Vector2(1, -1)
+
+[node name="Dash" parent="." instance=ExtResource("6_b735i")]
