@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0x5slri61ru0"]
+[gd_scene load_steps=9 format=3 uid="uid://b0x5slri61ru0"]
 
 [ext_resource type="PackedScene" uid="uid://gwyygu4qwi5" path="res://Entities/Player.tscn" id="1_c6fms"]
 [ext_resource type="PackedScene" uid="uid://bl7dkjcbes7j" path="res://Entities/Spider.tscn" id="2_t0yqr"]
@@ -6,6 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://nqos4ah55fd7" path="res://Scenes/Hintergrund.tscn" id="3_dc278"]
 [ext_resource type="Texture2D" uid="uid://ds5pl7cuma6n3" path="res://Sprites/healthbarProgress.png" id="4_8fukq"]
 [ext_resource type="Script" path="res://Scripts/HealthBar.cs" id="4_uncp5"]
+[ext_resource type="Script" path="res://Scripts/Textbox.cs" id="7_44m86"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7yi3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
 
 [node name="Main Game" type="Node2D"]
 
@@ -47,3 +56,43 @@ position = Vector2(946, 209)
 
 [node name="Spider3" parent="." instance=ExtResource("2_t0yqr")]
 position = Vector2(1616, 246)
+
+[node name="Textbox" type="CanvasLayer" parent="."]
+script = ExtResource("7_44m86")
+
+[node name="TextboxContainer" type="MarginContainer" parent="Textbox"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -180.0
+offset_right = 142.0
+offset_bottom = -61.0006
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o7yi3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Textbox/TextboxContainer"]
+custom_minimum_size = Vector2(290, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Textbox/TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Textbox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Move with WASD, shoot with LMB
+Confirm: Press <Enter>"
+horizontal_alignment = 1
+vertical_alignment = 1
